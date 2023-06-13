@@ -6,7 +6,7 @@ import os, PIL, io, cv2, torch
 
 if torch.cuda.is_available():
     map_location=lambda storage, loc: storage.cuda()
-else:
+else:   
     map_location='cpu'
 
 

@@ -4,7 +4,7 @@ import imageio
 import numpy as np
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont 
 
 
 charset = {'0': 0,  '1': 1,  '2': 2,  '3': 3,  '4': 4,  '5': 5,
