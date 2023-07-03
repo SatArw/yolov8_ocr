@@ -65,16 +65,6 @@ for file_path in (images_arr):
         img_np = np.asarray(PIL.Image.open(io.BytesIO(f.read())))
     preds = model.predict(file_path)
     
-    for pred in preds:
-        boxes = pred.boxes.xyxy.tolist()
-        scores = pred.boxes.conf.tolist()
-        
-    button_patches, button_positions, _ = button_candidates(
-        boxes, scores, img_np)
-
-    for button_img in button_patches:
-        # get button text and button_score for each of the images in button_patches
-        button_text, button_score, _ = recognizer.predict(button_img)
 
 t1 = time.time()
 
